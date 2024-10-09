@@ -13,3 +13,10 @@ mongoose
   .connect(mongoURI)
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.log(err))
+
+
+
+const userSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+})
